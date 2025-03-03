@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="style.css">
+ <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+ <nav id="nav">
+  <a href="#">Anasayfa</a>
+  <a href="#Hakkımda">Hakkımda</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#iletisim">İletişim</a>
+  <button id="theme-toggle">Tema Değiştir</button>
+ </nav>
+
+
+ <header>
+  <h1>Emirhan <span>Sezgin</span></h1>
+  <h2>Merhaba, ben bir Front<span>-end geliştiriciyim</span></h2>
+  <div class="bcg-color"></div>
+ </header>
+
+ <main>
+  <section id="Hakkımda">
+   <div class="about">
+    <h3>Hakkımda</h3>
+    <p>Kullanıcı odaklı, estetik ve işlevsel web arayüzleri tasarlayan bir front-end geliştiriciyim.
+
+     HTML, CSS, JavaScript başta olmak üzere, React, Tailwind CSS ve Bootstrap gibi modern teknolojilerle
+     duyarlı ve optimize edilmiş web siteleri oluşturuyorum. Her projede temiz kod yazımını ve performans
+     optimizasyonunu ön planda tutarak, kullanıcı deneyimini en iyi hale getirmeyi hedefliyorum. Sürekli
+     yeni teknolojileri ve tasarım trendlerini takip ederek kendimi geliştiriyorum.
+
+     Profesyonel projelerde yer almak ve etkileyici web deneyimleri oluşturmak için buradayım!</p>
+   </div>
+   <figure>
+    <img
+     src="./images/hakkımda.avif"
+     alt="">
+     <figcaption>Hakkımda resmi. Bilgisayarda kod yazarken</figcaption>
+   </figure>
+   
+  </section>
+
+  <aside>
+   <div class="card">
+       <h3>Gönderilerim</h3>
+       <div class="resim">
+<img src="./images/hakkımda.avif" alt="">       </div>
+       <div class="resim">
+        <img src="./images/portfolio.png" alt="">  
+       </div>
+       <div class="resim">
+        <img src="./images/portfolio2.png" alt="">  
+       </div>
+
+       <p>Bugünün tarihi: <time id="current-date"></time></p>
+
+   </div>
+  </aside>
+
+
+</div>
+
+<div class="clear"></div>
+
+  <section class="projeler" id="portfolio">
+   <h2>Portfolio</h2>
+   <div class="button">
+    <button onclick="toggle()">Projeleri Göster</button>
+   </div>
+
+   <div class="projects" id="projects">
+    <div class="prj-list">
+     <article>
+
+      <div class="item">
+       <div class="pfl-resim"> <img src="./images/portfolio.png" alt=""></div>
+       <p>Merhaba! Bu projede Semantic HTML ve CSS kullanarak modern ve şık bir web tasarımı
+        oluşturdum. Amacım, erişilebilirlik, temiz kod yapısı ve responsive (mobil uyumlu)
+        tasarım
+        ilkelerini en iyi şekilde uygulamaktı.</p>
+
+       <ul>
+        <li>Semantic HTML ile sayfanın yapısını daha okunaklı ve SEO dostu hale getirdim.</li>
+        <li>CSS ile modern ve estetik bir görünüm kazandırdım.</li>
+        <li>Responsive tasarım sayesinde her ekran boyutuna uyum sağlayan bir deneyim sundum
+        </li>
+        <li> Minimalist ve kullanıcı dostu bir arayüz oluşturarak odak noktamızı kullanıcı
+         deneyimi
+         üzerine kurdum.</li>
+        <li><b>Teknolojiler:</b></li>
+        <li>HTML5 (Semantic Elements)</li>
+        <li>CSS3 (Flexbox & Grid)</li>
+        <li>Responsive Design</li>
+       </ul>
+
+      </div>
+     </article>
+     <article>
+
+      <div class="item">
+       <div class="pfl-resim"> <img src="./images/portfolio2.png" alt=""></div>
+       <p>Merhaba! Bu projede Semantic HTML ve CSS kullanarak modern ve şık bir web tasarımı
+        oluşturdum. Amacım, erişilebilirlik, temiz kod yapısı ve responsive (mobil uyumlu)
+        tasarım
+        ilkelerini en iyi şekilde uygulamaktı.</p>
+
+       <ul>
+        <li>Semantic HTML ile sayfanın yapısını daha okunaklı ve SEO dostu hale getirdim.</li>
+        <li>CSS ile modern ve estetik bir görünüm kazandırdım.</li>
+        <li>Responsive tasarım sayesinde her ekran boyutuna uyum sağlayan bir deneyim sundum
+        </li>
+        <li> Minimalist ve kullanıcı dostu bir arayüz oluşturarak odak noktamızı kullanıcı
+         deneyimi
+         üzerine kurdum.</li>
+        <li><b>Teknolojiler:</b></li>
+        <li>HTML5 (Semantic Elements)</li>
+        <li>CSS3 (Flexbox & Grid)</li>
+        <li>Responsive Design</li>
+       </ul>
+
+      </div>
+     </article>
+    </div>
+   </div>
+  </section>
+  <div id="iletisim"></div>
+
+  <section class="iletisim">
+   <h2>İletişim</h2>
+   <address>
+
+    <div>
+     <i class='bx bx-envelope'></i>
+     <b> E-posta:</b> <a href="mailto:sezginemirhan29@gmail.com">sezginemirhan29@gmail.com</a>
+    </div>
+    <div>
+     <i class='bx bxl-linkedin'></i>
+     <b> LinkedIn:</b> <a href="https://www.linkedin.com/in/emirhan-sezgin/" target="_blank">Emirhan Sezgin
+      LinkedIn</a>
+    </div>
+    <div>
+     <i class='bx bxl-github'></i>
+     <b> Github:</b> <a href="https://github.com/emirsezginn" target="_blank">Emirhan Sezgin GitHub</a>
+
+    </div>
+
+
+   </address>
+  </section>
+ </main>
+
+
+ <div class="form" id="form">
+  <h2>Kayıt Ol</h2>
+ <form id="contactForm">
+  <label for="email">E-posta:</label>
+  <input type="email" id="email" name="email">
+  <p id="error-message" class="error"></p>
+
+  <label for="message">Mesajınız:</label>
+  <textarea id="message" name="message" rows="4"></textarea>
+
+  <button class="button"  type="submit">Gönder</button>
+</form>
+</div>
+
+ <footer>
+  <p>Emirhan Sezgin &copy; 2025</p>
+ </footer>
+
+ <script src="script.js"></script>
+</body>
+
+</html>
