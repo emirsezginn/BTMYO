@@ -289,6 +289,11 @@ form {
   padding: 20px;
   border-radius: 8px;
 }
+input:focus, textarea:focus {
+  border: 2px solid #27445D;
+  background-color: #ccc;
+  outline: none;
+}
 label, input, textarea {
   display: block;
   width: 100%;
