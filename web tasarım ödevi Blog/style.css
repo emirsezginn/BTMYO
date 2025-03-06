@@ -1,25 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
 :root {
-  --green: #497D74;
-  --blue:#27445D;
-  --white:#f3f3f3;
-  --bg-color: white;
-  --black: black;
-  --text-color: #ffffff;
-  --h3-renk: #27445D ;
+--nav-bar: #366a7e;
+--header-bcg:#f3f3f3;
+--portfolio:  linear-gradient(180deg, #366a7e, #61dae7 );
+--item:linear-gradient(180deg, #61dae7, #d4fbff);
+--iletişim:linear-gradient(180deg, #61dae7, #a9f6ff);
+--div-bcg:rgb(219, 245, 247);
+--form-bcg:linear-gradient(180deg, #a9f6ff, #e2fcff);
+--icerik:rgb(241, 254, 255);
+--theme: black;
+--buttonn:white;
 }
 
 [data-theme="dark"] {
- --green: #497D74;
-  --blue: #0e161d;
-  --bg-color: rgb(0, 0, 0);
-  --black: white;
-  --h3-renk: white ;
-  --white:rgb(71, 71, 71);
+  --nav-bar: #0f2313;
+  --header-bcg:#495246;
+  --portfolio:  linear-gradient(180deg, #0f2313, #495246 );
+  --item:linear-gradient(180deg, #495246, #ffffff);
+  --iletişim:linear-gradient(180deg, #495246, #a3a7a3);
+  --div-bcg:rgb(255, 255, 255);
+  --form-bcg:linear-gradient(180deg, #a3a7a3, #dddddd);
+  --icerik:#f0f0f0;
+  --theme:white;
+  --buttonn:#dddddd;
 
 }
 
 
 * {
+  font-family: "Unna";
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -33,20 +45,21 @@ header {
   position: relative;
   padding:20%;
   text-align: center;
-  background-color: #f3f3f3;
+  background-color: var(--header-bcg);
   overflow: hidden;
   z-index: 0;
 }
 
 .bcg-color {
   position: absolute;
-  background-color: var(--green);
+  background-color: var(--nav-bar);
   height:100vh;
   width: 50vw;
   top: 0;
-  left: 51.5vw;
+  left: 51.1vw;
   z-index: -1;
 }
+
 
 header > h1 >  span {
   color: #f3f3f3;
@@ -58,33 +71,46 @@ header > h2 >  span {
 
 header h1 {
   font-size: 50px;
+  margin-left: 10px;
 }
 
 #nav {
   position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   overflow: hidden;
-  background: var(--blue);
+  background: var(--nav-bar);
   z-index: 100;
   margin: 0 0 0 0;
 
 }
 
 #nav > a {
-  float: left;
-  padding: 16px 16px;
-  color: var(--text-color);
+  padding: 25px 16px;
+  color: white;
   text-decoration: none;
   transition: all 0.3s ease;
   font-size: 1.1rem;
 }
 
-#nav > a:nth-child(5) {
-    float: right;
-}
+
 
 #nav > a:hover {
   background-color: var(--bg-color);
+}
+
+#theme-toggle {
+  display: flex;
+  padding: 10px 15px;
+  font-size: 20px;
+  border: none;
+  margin-bottom: 8px;
+  background:var(--nav-bar);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 main{
@@ -125,6 +151,9 @@ aside {
   padding-left: 20px;
   height: 100%;
   color: var(--blue);
+  background: var(--header-bcg);
+  border-left: 1px solid black;
+
 }
 
 aside > .card > .resim > img {
@@ -176,13 +205,13 @@ main > section > figure > img {
 main  > .projeler {
 position: relative;
 text-align: center;
-background:var(--white) ;
+background: var(--portfolio);
 max-height: 110vh;
 padding: 40px;
 }
 
 main  > .projeler > h2 {
-  color: var(--green);
+  color: white;
   font-size: 2.4rem;
   font-weight: 700;
 }
@@ -201,14 +230,14 @@ main  > .projeler > h2 {
 }
 
 .item {
-  background:var(--green) ;
-  padding: 10px;
+  background: var(--item);
+  padding: 20px;
   margin: 10px auto;
-  width: 40vw;
+  width: 30vw;
   min-height: 80vh;
   border-radius: 16px;
   color: var(--white);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 .item > p {
   text-align: left;
@@ -231,11 +260,13 @@ border-radius: 16px;
 main > .iletisim {
   text-align: center;
   overflow: hidden;
-  margin: 60px 0;
+  padding: 60px 0;
+  background:  var(--iletişim);
+
 }
 
 main > .iletisim > h2 {
-  color: var(--green);
+  color: var(--theme);
   font-size: 2.4rem;
   font-weight: 700;
 }
@@ -250,7 +281,7 @@ main > .iletisim > address  {
 
 main > .iletisim > address > div {
   display: grid;
-  background: var(--white);
+  background: var(--div-bcg);
   padding: 20px;
   border-radius: 16px;
   width: 30vw;
@@ -263,7 +294,7 @@ font-size: 30px;
 }
 
   main > .iletisim > address > div > a {
-  color: var(--green);
+  color: black;
   text-decoration: none;
   margin-top: 10px;
 }
@@ -279,8 +310,10 @@ font-size: 30px;
   display: grid;
   justify-content: center;
   text-align: center;
-  margin: 60px 0;
+  padding: 60px 0;
   color: var(--green);
+  background:  var(--form-bcg);
+
 }
 
 form {
@@ -288,6 +321,12 @@ form {
   background: var(--white);
   padding: 20px;
   border-radius: 8px;
+  background: var(--div-bcg);
+
+}
+
+.form > h2 {
+  color: var(--theme);
 }
 input:focus, textarea:focus {
   border: 2px solid #27445D;
@@ -298,37 +337,53 @@ label, input, textarea {
   display: block;
   width: 100%;
   margin-bottom: 10px;
+  
 }
 input, textarea {
+  background: var(--icerik);
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 .error {
-  color: var(--blue);
+  color: red;
   font-size: 0.9rem;
 }
-button {
-  background: var(--blue);
+.button{
+  background: white;
   color: var(--text-color);
-  padding: 10px;
+  padding: 10px 15px;
   border: none;
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.4s ease;  
   font-size: 16px;
 }
-button:hover {
-  background: var(--blue);
+.buttonn{
+  background: var(--buttonn);
+  color: var(--text-color);
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.4s ease;  
+  font-size: 16px;
+}
+.button:hover {
+  background: transparent;
+  padding: 10px 20px;
+  color: white;
+}
+.buttonn:hover {
+  background: transparent;
   padding: 10px 20px;
 }
 
 footer {
-  color: var(--bg-color);
+  background: var(--nav-bar);
+  color: white;
   padding: 5px;
   text-align: center;
-  background: var(--blue);
-  margin-top: 20px;
 }
 
 
