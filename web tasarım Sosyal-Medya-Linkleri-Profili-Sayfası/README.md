@@ -1,0 +1,1 @@
+istenilen tüm gereksinimlere web sayfada yer verdim  
